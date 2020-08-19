@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -35,6 +36,9 @@ public class Student {
 	
 	@Column(name="enrollment_date")
 	private String enrollmentDate;
+	
+	@ManyToOne
+	private Grade grade;
 	
 	public Student() {
 		
